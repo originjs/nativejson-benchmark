@@ -149,7 +149,7 @@ solution "benchmark"
             "../thirdparty/boost/libs/align/include",
         }
 
-      linkoptions { "../../thirdparty/ULib/src/ulib/.libs/libulib.a" }
+      --linkoptions { "../../thirdparty/ULib/src/ulib/.libs/libulib.a" }
 
 		files {
 			"../src/*.h",
@@ -266,7 +266,7 @@ solution "jsonstat"
 			links "jsonclibs2"
             setTargetObjDir("../bin/jsonstat")
 
-      linkoptions { "../../thirdparty/ULib/src/ulib/.libs/libulib.a" }
+      -- linkoptions { "../../thirdparty/ULib/src/ulib/.libs/libulib.a" }
 
 			configuration "gmake"
 				buildoptions "-std=c++14"
