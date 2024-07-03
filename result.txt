@@ -1,0 +1,2661 @@
+cd build && ./premake.sh && ./machine.sh
+Building configurations...
+Running action 'gmake'...
+Done (241ms).
+#define MACHINE "13thGenCorei9-13900HX"
+cd build/gmake && make -f benchmark.make config=release_x64 verbose=1
+make[1]: Entering directory '/home/muxi/originjs/nativejson-benchmark/build/gmake'
+==== Building jsonclibs (release_x64) ====
+yajl_all.c
+cc   -MD -MP -D__STDC_FORMAT_MACROS=1 -DNDEBUG -I../../thirdparty -I../../thirdparty/include -I../../thirdparty/ujson4c/3rdparty -I../../thirdparty/pjson/inc -I../../thirdparty/udp-json-parser -I../../thirdparty/facil.io/lib/facil/core/types -I../../thirdparty/facil.io/lib/facil/core/types/fiobj -m64 -O3 -Wall -Wextra -march=native -Wall -Wextra  -o "../../intermediate/release_x64/gmake/x64/release/jsonclibs/yajl_all.o" -MF "../../intermediate/release_x64/gmake/x64/release/jsonclibs/yajl_all.d" -c "../../src/cjsonlibs/yajl_all.c"
+Linking jsonclibs
+ar -rcs "../../bin/libjsonclibs_release_x64_gmake.a" ../../intermediate/release_x64/gmake/x64/release/jsonclibs/ccan_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/cjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/facil.io_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/jansson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/jsmn_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/jsonc_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/juson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/parson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/pjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/qajson4c_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/sheredom_jsonh_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/udpjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/ujson4c_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/ultrajsondec_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/vincenthz_libjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/workflowjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs/yajl_all.o 
+==== Building nativejson (release_x64) ====
+main.cpp
+g++   -MD -MP -D__STDC_FORMAT_MACROS=1 -DNDEBUG -I../../thirdparty -I../../thirdparty/fastjson/include -I../../thirdparty/jsonbox/include -I../../thirdparty/jsoncpp/include -I../../thirdparty/rapidjson/include -I../../thirdparty/udp-json-parser -I../../thirdparty/include -I../../thirdparty/json-voorhees/include -I../../thirdparty/json-voorhees/src -I../../thirdparty/jsoncons/src -I../../thirdparty/ArduinoJson/include -I../../thirdparty/include/jeayeson/include/dummy -I../../thirdparty/jvar/include -I../../thirdparty/pjson/inc -I../../thirdparty/ULib/include -I../../thirdparty/facil.io/lib/facil/core/types -I../../thirdparty/facil.io/lib/facil/core/types/fiobj -I../../thirdparty/simdjson/singleheader -I../../thirdparty/boost/libs/json/include -I../../thirdparty/boost/libs/config/include -I../../thirdparty/boost/libs/assert/include -I../../thirdparty/boost/libs/exception/include -I../../thirdparty/boost/libs/throw_exception/include -I../../thirdparty/boost/libs/core/include -I../../thirdparty/boost/libs/container/include -I../../thirdparty/boost/libs/move/include -I../../thirdparty/boost/libs/static_assert/include -I../../thirdparty/boost/libs/intrusive/include -I../../thirdparty/boost/libs/system/include -I../../thirdparty/boost/libs/mp11/include -I../../thirdparty/boost/libs/align/include -m64 -O3 -Wall -Wextra -march=native -Wall -Wextra -std=c++14  -o "../../intermediate/release_x64/gmake/x64/release/nativejson/main.o" -MF "../../intermediate/release_x64/gmake/x64/release/nativejson/main.d" -c "../../src/main.cpp"
+yajltest.cpp
+g++   -MD -MP -D__STDC_FORMAT_MACROS=1 -DNDEBUG -I../../thirdparty -I../../thirdparty/fastjson/include -I../../thirdparty/jsonbox/include -I../../thirdparty/jsoncpp/include -I../../thirdparty/rapidjson/include -I../../thirdparty/udp-json-parser -I../../thirdparty/include -I../../thirdparty/json-voorhees/include -I../../thirdparty/json-voorhees/src -I../../thirdparty/jsoncons/src -I../../thirdparty/ArduinoJson/include -I../../thirdparty/include/jeayeson/include/dummy -I../../thirdparty/jvar/include -I../../thirdparty/pjson/inc -I../../thirdparty/ULib/include -I../../thirdparty/facil.io/lib/facil/core/types -I../../thirdparty/facil.io/lib/facil/core/types/fiobj -I../../thirdparty/simdjson/singleheader -I../../thirdparty/boost/libs/json/include -I../../thirdparty/boost/libs/config/include -I../../thirdparty/boost/libs/assert/include -I../../thirdparty/boost/libs/exception/include -I../../thirdparty/boost/libs/throw_exception/include -I../../thirdparty/boost/libs/core/include -I../../thirdparty/boost/libs/container/include -I../../thirdparty/boost/libs/move/include -I../../thirdparty/boost/libs/static_assert/include -I../../thirdparty/boost/libs/intrusive/include -I../../thirdparty/boost/libs/system/include -I../../thirdparty/boost/libs/mp11/include -I../../thirdparty/boost/libs/align/include -m64 -O3 -Wall -Wextra -march=native -Wall -Wextra -std=c++14  -o "../../intermediate/release_x64/gmake/x64/release/nativejson/yajltest.o" -MF "../../intermediate/release_x64/gmake/x64/release/nativejson/yajltest.d" -c "../../src/tests/yajltest.cpp"
+Linking nativejson
+g++ -o "../../bin/nativejson_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/nativejson/main.o ../../intermediate/release_x64/gmake/x64/release/nativejson/memorystat.o ../../intermediate/release_x64/gmake/x64/release/nativejson/arduinojsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/boostjsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/cajuntest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/ccantest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/cjsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/cpprestsdktest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/dropboxjson11test.o ../../intermediate/release_x64/gmake/x64/release/nativejson/fastjsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/follytest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/gasontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/janssontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jsmntest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jsonboxtest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jsonconstest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jsoncpptest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jsonctest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jsonspirittest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jsonxxtest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jusontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/jzontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/nbsdxsimplejsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/nlohmanntest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/parsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/picojsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/pjsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/pocotest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/qajson4ctest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/qttest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/rapidjsonautoutftest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/rapidjsonfullprectest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/rapidjsoninsitutest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/rapidjsoniterativetest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/rapidjsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/sajsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/sheredomjsonhtest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/strduptest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/taocppnlohmanntest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/taocpptest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/tunnuztest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/udpjsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/v8test.o ../../intermediate/release_x64/gmake/x64/release/nativejson/vincenthzlibjsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/voorheestest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/workflowjsontest.o ../../intermediate/release_x64/gmake/x64/release/nativejson/yajltest.o    -L../../bin -L../../thirdparty/simdjson -L/usr/lib64 -m64 -s ../../bin/libjsonclibs_release_x64_gmake.a
+make[1]: Leaving directory '/home/muxi/originjs/nativejson-benchmark/build/gmake'
+cd build/gmake && make -f jsonstat.make config=release_x64 verbose=1
+make[1]: Entering directory '/home/muxi/originjs/nativejson-benchmark/build/gmake'
+==== Building jsonclibs2 (release_x64) ====
+yajl_all.c
+cc   -MD -MP -DUSE_MEMORYSTAT=0 -DTEST_PARSE=1 -DTEST_STRINGIFY=0 -DTEST_PRETTIFY=0 -DTEST_TEST_STATISTICS=1 -DTEST_SAXROUNDTRIP=0 -DTEST_SAXSTATISTICS=0 -DTEST_SAXSTATISTICSUTF16=0 -DTEST_CONFORMANCE=0 -DTEST_INFO=0 -DNDEBUG -I../../thirdparty/fastjson/include -I../../thirdparty/jsonbox/include -I../../thirdparty/jsoncpp/include -I../../thirdparty/rapidjson/include -I../../thirdparty/json-voorhees/include -I../../thirdparty/json-voorhees/src -I../../thirdparty/jsoncons/src -I../../thirdparty/ArduinoJson/include -I../../thirdparty/include/jeayeson/include/dummy -I../../thirdparty/jvar/include -I../../thirdparty/pjson/inc -I../../thirdparty/ULib/include -I../../thirdparty/simdjson/singleheader -I../../thirdparty/boost/libs/json/include -I../../thirdparty/boost/libs/config/include -I../../thirdparty/boost/libs/assert/include -I../../thirdparty/boost/libs/exception/include -I../../thirdparty/boost/libs/throw_exception/include -I../../thirdparty/boost/libs/core/include -I../../thirdparty/boost/libs/container/include -I../../thirdparty/boost/libs/move/include -I../../thirdparty/boost/libs/static_assert/include -I../../thirdparty/boost/libs/intrusive/include -I../../thirdparty/boost/libs/system/include -I../../thirdparty/boost/libs/mp11/include -I../../thirdparty/boost/libs/align/include -I../../thirdparty -I../../thirdparty/include -I../../thirdparty/ujson4c/3rdparty -I../../thirdparty/udp-json-parser -I../../thirdparty/facil.io/lib/facil/core/types -I../../thirdparty/facil.io/lib/facil/core/types/fiobj -m64 -O3 -Wall -Wextra -march=native -Wall -Wextra  -o "../../intermediate/release_x64/gmake/x64/release/jsonclibs2/yajl_all.o" -MF "../../intermediate/release_x64/gmake/x64/release/jsonclibs2/yajl_all.d" -c "../../src/cjsonlibs/yajl_all.c"
+Linking jsonclibs2
+ar -rcs "../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a" ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/ccan_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/cjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/facil.io_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/jansson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/jsmn_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/jsonc_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/juson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/parson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/pjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/qajson4c_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/sheredom_jsonh_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/udpjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/ujson4c_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/ultrajsondec_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/vincenthz_libjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/workflowjson_all.o ../../intermediate/release_x64/gmake/x64/release/jsonclibs2/yajl_all.o 
+==== Building jsonstat_nbsdxsimplejsontest (release_x64) ====
+Linking jsonstat_nbsdxsimplejsontest
+g++ -o "../../bin/jsonstat/jsonstat_nbsdxsimplejsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_nbsdxsimplejsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_nbsdxsimplejsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_nbsdxsimplejsontest/nbsdxsimplejsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_taocpptest (release_x64) ====
+Linking jsonstat_taocpptest
+g++ -o "../../bin/jsonstat/jsonstat_taocpptest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_taocpptest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_taocpptest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_taocpptest/taocpptest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_gasontest (release_x64) ====
+Linking jsonstat_gasontest
+g++ -o "../../bin/jsonstat/jsonstat_gasontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_gasontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_gasontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_gasontest/gasontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jusontest (release_x64) ====
+Linking jsonstat_jusontest
+g++ -o "../../bin/jsonstat/jsonstat_jusontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jusontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jusontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jusontest/jusontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jsmntest (release_x64) ====
+Linking jsonstat_jsmntest
+g++ -o "../../bin/jsonstat/jsonstat_jsmntest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsmntest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsmntest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsmntest/jsmntest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_strduptest (release_x64) ====
+Linking jsonstat_strduptest
+g++ -o "../../bin/jsonstat/jsonstat_strduptest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_strduptest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_strduptest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_strduptest/strduptest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_taocppnlohmanntest (release_x64) ====
+Linking jsonstat_taocppnlohmanntest
+g++ -o "../../bin/jsonstat/jsonstat_taocppnlohmanntest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_taocppnlohmanntest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_taocppnlohmanntest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_taocppnlohmanntest/taocppnlohmanntest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_sheredomjsonhtest (release_x64) ====
+Linking jsonstat_sheredomjsonhtest
+g++ -o "../../bin/jsonstat/jsonstat_sheredomjsonhtest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_sheredomjsonhtest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_sheredomjsonhtest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_sheredomjsonhtest/sheredomjsonhtest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_tunnuztest (release_x64) ====
+Linking jsonstat_tunnuztest
+g++ -o "../../bin/jsonstat/jsonstat_tunnuztest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_tunnuztest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_tunnuztest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_tunnuztest/tunnuztest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jsonxxtest (release_x64) ====
+Linking jsonstat_jsonxxtest
+g++ -o "../../bin/jsonstat/jsonstat_jsonxxtest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonxxtest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonxxtest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonxxtest/jsonxxtest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_cajuntest (release_x64) ====
+Linking jsonstat_cajuntest
+g++ -o "../../bin/jsonstat/jsonstat_cajuntest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_cajuntest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_cajuntest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_cajuntest/cajuntest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_arduinojsontest (release_x64) ====
+Linking jsonstat_arduinojsontest
+g++ -o "../../bin/jsonstat/jsonstat_arduinojsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_arduinojsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_arduinojsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_arduinojsontest/arduinojsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_rapidjsonautoutftest (release_x64) ====
+Linking jsonstat_rapidjsonautoutftest
+g++ -o "../../bin/jsonstat/jsonstat_rapidjsonautoutftest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsonautoutftest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsonautoutftest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsonautoutftest/rapidjsonautoutftest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_picojsontest (release_x64) ====
+Linking jsonstat_picojsontest
+g++ -o "../../bin/jsonstat/jsonstat_picojsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_picojsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_picojsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_picojsontest/picojsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_janssontest (release_x64) ====
+Linking jsonstat_janssontest
+g++ -o "../../bin/jsonstat/jsonstat_janssontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_janssontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_janssontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_janssontest/janssontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_follytest (release_x64) ====
+Linking jsonstat_follytest
+g++ -o "../../bin/jsonstat/jsonstat_follytest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_follytest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_follytest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_follytest/follytest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jsonboxtest (release_x64) ====
+Linking jsonstat_jsonboxtest
+g++ -o "../../bin/jsonstat/jsonstat_jsonboxtest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonboxtest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonboxtest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonboxtest/jsonboxtest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_sajsontest (release_x64) ====
+Linking jsonstat_sajsontest
+g++ -o "../../bin/jsonstat/jsonstat_sajsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_sajsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_sajsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_sajsontest/sajsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_rapidjsonfullprectest (release_x64) ====
+Linking jsonstat_rapidjsonfullprectest
+g++ -o "../../bin/jsonstat/jsonstat_rapidjsonfullprectest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsonfullprectest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsonfullprectest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsonfullprectest/rapidjsonfullprectest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_nlohmanntest (release_x64) ====
+Linking jsonstat_nlohmanntest
+g++ -o "../../bin/jsonstat/jsonstat_nlohmanntest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_nlohmanntest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_nlohmanntest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_nlohmanntest/nlohmanntest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jsonctest (release_x64) ====
+Linking jsonstat_jsonctest
+g++ -o "../../bin/jsonstat/jsonstat_jsonctest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonctest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonctest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonctest/jsonctest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jsoncpptest (release_x64) ====
+Linking jsonstat_jsoncpptest
+g++ -o "../../bin/jsonstat/jsonstat_jsoncpptest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsoncpptest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsoncpptest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsoncpptest/jsoncpptest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_pocotest (release_x64) ====
+Linking jsonstat_pocotest
+g++ -o "../../bin/jsonstat/jsonstat_pocotest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_pocotest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_pocotest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_pocotest/pocotest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_rapidjsoninsitutest (release_x64) ====
+Linking jsonstat_rapidjsoninsitutest
+g++ -o "../../bin/jsonstat/jsonstat_rapidjsoninsitutest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsoninsitutest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsoninsitutest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsoninsitutest/rapidjsoninsitutest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_workflowjsontest (release_x64) ====
+Linking jsonstat_workflowjsontest
+g++ -o "../../bin/jsonstat/jsonstat_workflowjsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_workflowjsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_workflowjsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_workflowjsontest/workflowjsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_dropboxjson11test (release_x64) ====
+Linking jsonstat_dropboxjson11test
+g++ -o "../../bin/jsonstat/jsonstat_dropboxjson11test_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_dropboxjson11test/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_dropboxjson11test/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_dropboxjson11test/dropboxjson11test.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_qttest (release_x64) ====
+Linking jsonstat_qttest
+g++ -o "../../bin/jsonstat/jsonstat_qttest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_qttest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_qttest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_qttest/qttest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jsonconstest (release_x64) ====
+Linking jsonstat_jsonconstest
+g++ -o "../../bin/jsonstat/jsonstat_jsonconstest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonconstest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonconstest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonconstest/jsonconstest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jsonspirittest (release_x64) ====
+Linking jsonstat_jsonspirittest
+g++ -o "../../bin/jsonstat/jsonstat_jsonspirittest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonspirittest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonspirittest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jsonspirittest/jsonspirittest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_jzontest (release_x64) ====
+Linking jsonstat_jzontest
+g++ -o "../../bin/jsonstat/jsonstat_jzontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_jzontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jzontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_jzontest/jzontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_qajson4ctest (release_x64) ====
+Linking jsonstat_qajson4ctest
+g++ -o "../../bin/jsonstat/jsonstat_qajson4ctest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_qajson4ctest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_qajson4ctest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_qajson4ctest/qajson4ctest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_fastjsontest (release_x64) ====
+Linking jsonstat_fastjsontest
+g++ -o "../../bin/jsonstat/jsonstat_fastjsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_fastjsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_fastjsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_fastjsontest/fastjsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_rapidjsontest (release_x64) ====
+Linking jsonstat_rapidjsontest
+g++ -o "../../bin/jsonstat/jsonstat_rapidjsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsontest/rapidjsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_pjsontest (release_x64) ====
+Linking jsonstat_pjsontest
+g++ -o "../../bin/jsonstat/jsonstat_pjsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_pjsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_pjsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_pjsontest/pjsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_v8test (release_x64) ====
+Linking jsonstat_v8test
+g++ -o "../../bin/jsonstat/jsonstat_v8test_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_v8test/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_v8test/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_v8test/v8test.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_ccantest (release_x64) ====
+Linking jsonstat_ccantest
+g++ -o "../../bin/jsonstat/jsonstat_ccantest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_ccantest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_ccantest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_ccantest/ccantest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_vincenthzlibjsontest (release_x64) ====
+Linking jsonstat_vincenthzlibjsontest
+g++ -o "../../bin/jsonstat/jsonstat_vincenthzlibjsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_vincenthzlibjsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_vincenthzlibjsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_vincenthzlibjsontest/vincenthzlibjsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_boostjsontest (release_x64) ====
+Linking jsonstat_boostjsontest
+g++ -o "../../bin/jsonstat/jsonstat_boostjsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_boostjsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_boostjsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_boostjsontest/boostjsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_udpjsontest (release_x64) ====
+Linking jsonstat_udpjsontest
+g++ -o "../../bin/jsonstat/jsonstat_udpjsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_udpjsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_udpjsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_udpjsontest/udpjsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_cjsontest (release_x64) ====
+Linking jsonstat_cjsontest
+g++ -o "../../bin/jsonstat/jsonstat_cjsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_cjsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_cjsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_cjsontest/cjsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_rapidjsoniterativetest (release_x64) ====
+Linking jsonstat_rapidjsoniterativetest
+g++ -o "../../bin/jsonstat/jsonstat_rapidjsoniterativetest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsoniterativetest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsoniterativetest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_rapidjsoniterativetest/rapidjsoniterativetest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_yajltest (release_x64) ====
+yajltest.cpp
+g++   -MD -MP -DUSE_MEMORYSTAT=0 -DTEST_PARSE=1 -DTEST_STRINGIFY=0 -DTEST_PRETTIFY=0 -DTEST_TEST_STATISTICS=1 -DTEST_SAXROUNDTRIP=0 -DTEST_SAXSTATISTICS=0 -DTEST_SAXSTATISTICSUTF16=0 -DTEST_CONFORMANCE=0 -DTEST_INFO=0 -DNDEBUG -I../../thirdparty -I../../thirdparty/fastjson/include -I../../thirdparty/jsonbox/include -I../../thirdparty/jsoncpp/include -I../../thirdparty/rapidjson/include -I../../thirdparty/udp-json-parser -I../../thirdparty/include -I../../thirdparty/json-voorhees/include -I../../thirdparty/json-voorhees/src -I../../thirdparty/jsoncons/src -I../../thirdparty/ArduinoJson/include -I../../thirdparty/include/jeayeson/include/dummy -I../../thirdparty/jvar/include -I../../thirdparty/pjson/inc -I../../thirdparty/ULib/include -I../../thirdparty/facil.io/lib/facil/core/types -I../../thirdparty/facil.io/lib/facil/core/types/fiobj -I../../thirdparty/simdjson/singleheader -I../../thirdparty/boost/libs/json/include -I../../thirdparty/boost/libs/config/include -I../../thirdparty/boost/libs/assert/include -I../../thirdparty/boost/libs/exception/include -I../../thirdparty/boost/libs/throw_exception/include -I../../thirdparty/boost/libs/core/include -I../../thirdparty/boost/libs/container/include -I../../thirdparty/boost/libs/move/include -I../../thirdparty/boost/libs/static_assert/include -I../../thirdparty/boost/libs/intrusive/include -I../../thirdparty/boost/libs/system/include -I../../thirdparty/boost/libs/mp11/include -I../../thirdparty/boost/libs/align/include -m64 -O3 -Wall -Wextra -march=native -Wall -Wextra -std=c++14  -o "../../intermediate/release_x64/gmake/x64/release/jsonstat_yajltest/yajltest.o" -MF "../../intermediate/release_x64/gmake/x64/release/jsonstat_yajltest/yajltest.d" -c "../../src/tests/yajltest.cpp"
+Linking jsonstat_yajltest
+g++ -o "../../bin/jsonstat/jsonstat_yajltest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_yajltest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_yajltest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_yajltest/yajltest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_voorheestest (release_x64) ====
+Linking jsonstat_voorheestest
+g++ -o "../../bin/jsonstat/jsonstat_voorheestest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_voorheestest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_voorheestest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_voorheestest/voorheestest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_parsontest (release_x64) ====
+Linking jsonstat_parsontest
+g++ -o "../../bin/jsonstat/jsonstat_parsontest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_parsontest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_parsontest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_parsontest/parsontest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+==== Building jsonstat_cpprestsdktest (release_x64) ====
+Linking jsonstat_cpprestsdktest
+g++ -o "../../bin/jsonstat/jsonstat_cpprestsdktest_release_x64_gmake" ../../intermediate/release_x64/gmake/x64/release/jsonstat_cpprestsdktest/jsonstatmain.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_cpprestsdktest/memorystat.o ../../intermediate/release_x64/gmake/x64/release/jsonstat_cpprestsdktest/cpprestsdktest.o    -L../../bin/jsonstat -L/usr/lib64 -m64 -s ../../bin/jsonstat/libjsonclibs2_release_x64_gmake.a
+make[1]: Leaving directory '/home/muxi/originjs/nativejson-benchmark/build/gmake'
+cd build/gmake && make -f nativejson.make config=release_x64 verbose=1
+cd bin && ./nativejson_release_x64_gmake 
+Read 'canada.json' (2251051 bytes)
+objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+
+Read 'citm_catalog.json' (1727204 bytes)
+objectCount:       10937
+arrayCount:        10451
+numberCount:       14392
+stringCount:       26604
+trueCount:             0
+falseCount:            0
+nullCount:          1263
+memberCount:       25869
+elementCount:      11908
+stringLength:     221379
+
+Read 'twitter.json' (631514 bytes)
+objectCount:        1264
+arrayCount:         1050
+numberCount:        2109
+stringCount:       18099
+trueCount:           345
+falseCount:         2446
+nullCount:          1946
+memberCount:       13345
+elementCount:        568
+stringLength:     367917
+
+
+Verifying ArduinoJson (C++) ... OK
+Verifying Boost.JSON ... 
+Warning: potential memory leak (2 allocations for 8392808 bytes)
+Memory stats:
+ mallocCount = 224289
+reallocCount = 0
+   freeCount = 224287
+ currentSize = 8392808
+    peakSize = 19708600
+
+
+Warning: potential memory leak (0 allocations for 16 bytes)
+Memory stats:
+ mallocCount = 156069
+reallocCount = 0
+   freeCount = 156069
+ currentSize = 16
+    peakSize = 4983992
+
+
+Warning: potential memory leak (0 allocations for 32 bytes)
+Memory stats:
+ mallocCount = 69599
+reallocCount = 0
+   freeCount = 69599
+ currentSize = 32
+    peakSize = 2850248
+
+OK
+Verifying CAJUN (C++) ... OK
+Verifying ccan/json (C) ... OK
+Verifying cJSON (C) ... OK
+Verifying dropbox/json11 (C++11) ... 
+Warning: potential memory leak (3 allocations for 120 bytes)
+Memory stats:
+ mallocCount = 562805
+reallocCount = 0
+   freeCount = 562802
+ currentSize = 120
+    peakSize = 20963376
+
+OK
+Verifying mikeando/FastJson (C++) ... OK
+Verifying gason (C++11) ... OK
+Verifying Jansson (C) ... OK
+Verifying jsmn (C) ... 
+Statistics of 'citm_catalog.json' is different from reference.
+
+Reference
+---------
+objectCount:       10937
+arrayCount:        10451
+numberCount:       14392
+stringCount:       26604
+trueCount:             0
+falseCount:            0
+nullCount:          1263
+memberCount:       25869
+elementCount:      11908
+stringLength:     221379
+
+Stat 1
+--------
+objectCount:       10937
+arrayCount:        10451
+numberCount:       14392
+stringCount:       26604
+trueCount:             0
+falseCount:            0
+nullCount:          1263
+memberCount:       25869
+elementCount:      11908
+stringLength:     221381
+
+
+Statistics of 'twitter.json' is different from reference.
+
+Reference
+---------
+objectCount:        1264
+arrayCount:         1050
+numberCount:        2109
+stringCount:       18099
+trueCount:           345
+falseCount:         2446
+nullCount:          1946
+memberCount:       13345
+elementCount:        568
+stringLength:     367917
+
+Stat 1
+--------
+objectCount:        1264
+arrayCount:         1050
+numberCount:        2109
+stringCount:       18099
+trueCount:           345
+falseCount:         2446
+nullCount:          1946
+memberCount:       13345
+elementCount:        568
+stringLength:     369145
+
+Failed
+Verifying JsonBox (C++) ... OK
+Verifying jsoncons (C++) ... OK
+Verifying JsonCpp (C++) ... OK
+Verifying json-c (C) ... OK
+Verifying hjiang/JSON++ (C++) ... OK
+Verifying juson (C) ... OK
+Verifying Jzon (C++) ... OK
+Verifying nbsdx_SimpleJSON (C++11) ... 
+Statistics of 'canada.json' is different from reference.
+
+Reference
+---------
+objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+
+Stat #1
+--------
+objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           0
+elementCount:     167178
+stringLength:         90
+
+
+Statistics of 'citm_catalog.json' is different from reference.
+
+Reference
+---------
+objectCount:       10937
+arrayCount:        10451
+numberCount:       14392
+stringCount:       26604
+trueCount:             0
+falseCount:            0
+nullCount:          1263
+memberCount:       25869
+elementCount:      11908
+stringLength:     221379
+
+Stat #1
+--------
+objectCount:       10937
+arrayCount:        10451
+numberCount:       14392
+stringCount:       26604
+trueCount:             0
+falseCount:            0
+nullCount:          1263
+memberCount:           0
+elementCount:      37777
+stringLength:     221381
+
+
+Statistics of 'twitter.json' is different from reference.
+
+Reference
+---------
+objectCount:        1264
+arrayCount:         1050
+numberCount:        2109
+stringCount:       18099
+trueCount:           345
+falseCount:         2446
+nullCount:          1946
+memberCount:       13345
+elementCount:        568
+stringLength:     367917
+
+Stat #1
+--------
+objectCount:        1264
+arrayCount:         1050
+numberCount:        2109
+stringCount:       18099
+trueCount:           345
+falseCount:         2446
+nullCount:          1946
+memberCount:           0
+elementCount:      13913
+stringLength:     369145
+
+Failed
+Verifying Nlohmann (C++11) ... OK
+Verifying Parson (C) ... OK
+Verifying PicoJSON (C++) ... OK
+Verifying pjson (C) ... 
+Failed to parse 'canada.json'
+
+Failed to parse 'citm_catalog.json'
+
+Failed to parse 'twitter.json'
+Failed
+Verifying Qajson4c (C) ... 
+Failed to parse 'canada.json' 2nd time
+Failed
+Verifying RapidJSON_AutoUTF (C++) ... OK
+Verifying RapidJSON_FullPrec (C++) ... OK
+Verifying RapidJSON_Insitu (C++) ... OK
+Verifying RapidJSON_Iterative (C++) ... OK
+Verifying RapidJSON (C++) ... OK
+Verifying sajson (C++) ... OK
+Verifying Sheredom json.h (C) ... OK
+Verifying strdup (C) ... Not support Statistics
+Not support Statistics
+Not support Statistics
+OK
+Verifying taocpp/json & Nlohmann (C++11) ... OK
+Verifying taocpp/json (C++11) ... OK
+Verifying tunnuz/JSON++ (C++) ... 
+Warning: potential memory leak (1 allocations for 72 bytes)
+Memory stats:
+ mallocCount = 3344023
+reallocCount = 1
+   freeCount = 3344023
+ currentSize = 72
+    peakSize = 159290384
+
+
+Failed to parse 'citm_catalog.json' 2nd time
+
+Failed to parse 'twitter.json' 2nd time
+Failed
+Verifying Vinenthz/libjson (C) ... 
+Statistics of 'citm_catalog.json' is different from reference.
+
+Reference
+---------
+objectCount:       10937
+arrayCount:        10451
+numberCount:       14392
+stringCount:       26604
+trueCount:             0
+falseCount:            0
+nullCount:          1263
+memberCount:       25869
+elementCount:      11908
+stringLength:     221379
+
+Stat #2
+--------
+objectCount:       10937
+arrayCount:        10451
+numberCount:       14392
+stringCount:       27867
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:       25869
+elementCount:      11908
+stringLength:     226431
+
+
+Statistics of 'twitter.json' is different from reference.
+
+Reference
+---------
+objectCount:        1264
+arrayCount:         1050
+numberCount:        2109
+stringCount:       18099
+trueCount:           345
+falseCount:         2446
+nullCount:          1946
+memberCount:       13345
+elementCount:        568
+stringLength:     367917
+
+Stat #2
+--------
+objectCount:        1264
+arrayCount:         1050
+numberCount:        2109
+stringCount:       22491
+trueCount:           345
+falseCount:            0
+nullCount:             0
+memberCount:       13345
+elementCount:        568
+stringLength:     387931
+
+Failed
+Verifying C++ Workflow JSON (C) ... 
+Statistics of 'canada.json' is different from reference.
+
+Reference
+---------
+objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+
+Stat 1
+--------
+objectCount:           4
+arrayCount:        56045
+numberCount:           0
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+
+
+Statistics of 'citm_catalog.json' is different from reference.
+
+Reference
+---------
+objectCount:       10937
+arrayCount:        10451
+numberCount:       14392
+stringCount:       26604
+trueCount:             0
+falseCount:            0
+nullCount:          1263
+memberCount:       25869
+elementCount:      11908
+stringLength:     221379
+
+Stat 1
+--------
+objectCount:       10937
+arrayCount:        10451
+numberCount:           0
+stringCount:       26604
+trueCount:             0
+falseCount:            0
+nullCount:          1263
+memberCount:       25869
+elementCount:      11908
+stringLength:     221379
+
+
+Statistics of 'twitter.json' is different from reference.
+
+Reference
+---------
+objectCount:        1264
+arrayCount:         1050
+numberCount:        2109
+stringCount:       18099
+trueCount:           345
+falseCount:         2446
+nullCount:          1946
+memberCount:       13345
+elementCount:        568
+stringLength:     367917
+
+Stat 1
+--------
+objectCount:        1264
+arrayCount:         1050
+numberCount:           0
+stringCount:       18099
+trueCount:           345
+falseCount:         2446
+nullCount:          1946
+memberCount:       13345
+elementCount:        568
+stringLength:     367917
+
+Failed
+Verifying YAJL (C) ... OK
+
+Benchmarking Performance of ArduinoJson (C++)
+          Parse canada.json          ... 155.426 ms  13.812 MB/s
+          Parse citm_catalog.json    ...  1.393 ms  1182.477 MB/s
+          Parse twitter.json         ...  1.180 ms  510.389 MB/s
+      Stringify canada.json          ... 28.920 ms  74.231 MB/s
+      Stringify citm_catalog.json    ...  7.026 ms  234.442 MB/s
+      Stringify twitter.json         ...  6.384 ms  94.339 MB/s
+       Prettify canada.json          ... 86.866 ms  24.714 MB/s
+       Prettify citm_catalog.json    ... 20.467 ms  80.480 MB/s
+       Prettify twitter.json         ... 11.605 ms  51.896 MB/s
+     Statistics canada.json          ...  9.890 ms  217.065 MB/s
+     Statistics citm_catalog.json    ...  0.309 ms  5330.712 MB/s
+     Statistics twitter.json         ...  0.161 ms  3740.737 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 26928
+
+Benchmarking Performance of Boost.JSON
+          Parse canada.json          ...  4.293 ms  500.063 MB/s
+          Parse citm_catalog.json    ...  2.566 ms  641.929 MB/s
+          Parse twitter.json         ...  1.595 ms  377.592 MB/s
+      Stringify canada.json          ...  3.996 ms  537.230 MB/s
+      Stringify citm_catalog.json    ...  0.446 ms  3693.251 MB/s
+      Stringify twitter.json         ...  0.282 ms  2135.669 MB/s
+
+Warning: potential memory leak (0 allocations for 25165824 bytes)
+Memory stats:
+ mallocCount = 225013
+reallocCount = 0
+   freeCount = 225013
+ currentSize = 25165824
+    peakSize = 213001784
+
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.296 ms  7252.600 MB/s
+     Statistics citm_catalog.json    ...  0.088 ms  18718.069 MB/s
+     Statistics twitter.json         ...  0.031 ms  19427.699 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 252440
+
+Benchmarking Performance of CAJUN (C++)
+          Parse canada.json          ... 213.407 ms  10.060 MB/s
+          Parse citm_catalog.json    ... 51.147 ms  32.205 MB/s
+          Parse twitter.json         ... 16.849 ms  35.744 MB/s
+      Stringify canada.json          ... 53.764 ms  39.929 MB/s
+      Stringify citm_catalog.json    ...  9.744 ms  169.047 MB/s
+      Stringify twitter.json         ...  6.408 ms  93.985 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.736 ms  2916.806 MB/s
+     Statistics citm_catalog.json    ...  0.223 ms  7386.503 MB/s
+     Statistics twitter.json         ...  0.058 ms  10383.770 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 92472
+
+Benchmarking Performance of ccan/json (C)
+          Parse canada.json          ...  9.148 ms  234.671 MB/s
+          Parse citm_catalog.json    ...  1.998 ms  824.419 MB/s
+          Parse twitter.json         ...  1.434 ms  419.985 MB/s
+      Stringify canada.json          ... 34.596 ms  62.053 MB/s
+      Stringify citm_catalog.json    ...  3.772 ms  436.689 MB/s
+      Stringify twitter.json         ...  1.116 ms  539.658 MB/s
+       Prettify canada.json          ... 45.572 ms  47.107 MB/s
+       Prettify citm_catalog.json    ...  6.419 ms  256.612 MB/s
+       Prettify twitter.json         ...  1.573 ms  382.873 MB/s
+     Statistics canada.json          ...  0.420 ms  5111.356 MB/s
+     Statistics citm_catalog.json    ...  0.157 ms  10491.657 MB/s
+     Statistics twitter.json         ...  0.119 ms  5060.997 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 39216
+
+Benchmarking Performance of cJSON (C)
+          Parse canada.json          ... 16.045 ms  133.797 MB/s
+          Parse citm_catalog.json    ...  2.076 ms  793.444 MB/s
+          Parse twitter.json         ...  1.087 ms  554.056 MB/s
+      Stringify canada.json          ... 85.334 ms  25.157 MB/s
+      Stringify citm_catalog.json    ...  5.431 ms  303.294 MB/s
+      Stringify twitter.json         ...  1.428 ms  421.750 MB/s
+       Prettify canada.json          ... 81.827 ms  26.235 MB/s
+       Prettify citm_catalog.json    ...  5.133 ms  320.902 MB/s
+       Prettify twitter.json         ...  1.294 ms  465.424 MB/s
+     Statistics canada.json          ...  0.565 ms  3799.592 MB/s
+     Statistics citm_catalog.json    ...  0.155 ms  10627.033 MB/s
+     Statistics twitter.json         ...  0.102 ms  5904.497 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 39248
+
+Benchmarking Performance of dropbox/json11 (C++11)
+          Parse canada.json          ... 13.671 ms  157.031 MB/s
+          Parse citm_catalog.json    ...  4.152 ms  396.722 MB/s
+          Parse twitter.json         ...  2.976 ms  202.372 MB/s
+      Stringify canada.json          ... 38.900 ms  55.187 MB/s
+      Stringify citm_catalog.json    ...  1.806 ms  912.065 MB/s
+      Stringify twitter.json         ...  1.528 ms  394.148 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.505 ms  4251.029 MB/s
+     Statistics citm_catalog.json    ...  0.214 ms  7697.150 MB/s
+     Statistics twitter.json         ...  0.086 ms  7003.008 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 96560
+
+Benchmarking Performance of mikeando/FastJson (C++)
+          Parse canada.json          ...  7.755 ms  276.824 MB/s
+          Parse citm_catalog.json    ...  2.665 ms  618.083 MB/s
+          Parse twitter.json         ...  1.986 ms  303.252 MB/s
+      Stringify canada.json          ... 31.466 ms  68.225 MB/s
+      Stringify citm_catalog.json    ...  3.901 ms  422.248 MB/s
+      Stringify twitter.json         ...  1.435 ms  419.692 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.163 ms  13170.365 MB/s
+     Statistics citm_catalog.json    ...  0.069 ms  23872.320 MB/s
+     Statistics twitter.json         ...  0.034 ms  17713.491 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 80200
+
+Benchmarking Performance of gason (C++11)
+          Parse canada.json          ...  1.442 ms  1488.744 MB/s
+          Parse citm_catalog.json    ...  0.956 ms  1723.002 MB/s
+          Parse twitter.json         ...  0.403 ms  1494.438 MB/s
+      Stringify canada.json          ... 26.023 ms  82.495 MB/s
+      Stringify citm_catalog.json    ...  6.636 ms  248.220 MB/s
+      Stringify twitter.json         ...  3.129 ms  192.476 MB/s
+       Prettify canada.json          ... 54.198 ms  39.610 MB/s
+       Prettify citm_catalog.json    ... 14.068 ms  117.088 MB/s
+       Prettify twitter.json         ...  5.930 ms  101.561 MB/s
+     Statistics canada.json          ...  0.300 ms  7155.898 MB/s
+     Statistics citm_catalog.json    ...  0.142 ms  11599.930 MB/s
+     Statistics twitter.json         ...  0.066 ms  9125.132 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 18736
+
+Benchmarking Performance of Jansson (C)
+          Parse canada.json          ... 26.156 ms  82.076 MB/s
+          Parse citm_catalog.json    ...  8.153 ms  202.035 MB/s
+          Parse twitter.json         ...  5.077 ms  118.625 MB/s
+      Stringify canada.json          ... 38.818 ms  55.303 MB/s
+      Stringify citm_catalog.json    ...  1.480 ms  1112.966 MB/s
+      Stringify twitter.json         ...  0.979 ms  615.177 MB/s
+       Prettify canada.json          ... 43.422 ms  49.440 MB/s
+       Prettify citm_catalog.json    ...  2.042 ms  806.655 MB/s
+       Prettify twitter.json         ...  1.204 ms  500.215 MB/s
+     Statistics canada.json          ...  0.383 ms  5605.142 MB/s
+     Statistics citm_catalog.json    ...  0.229 ms  7192.970 MB/s
+     Statistics twitter.json         ...  0.101 ms  5962.957 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 84344
+
+Benchmarking Performance of jsmn (C)
+          Parse canada.json          ... 175.702 ms  12.218 MB/s
+          Parse citm_catalog.json    ...  5.479 ms  300.637 MB/s
+          Parse twitter.json         ...  1.687 ms  357.000 MB/s
+      Stringify canada.json          ... Not support
+      Stringify citm_catalog.json    ... Not support
+      Stringify twitter.json         ... Not support
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.142 ms  15118.095 MB/s
+     Statistics citm_catalog.json    ...  0.058 ms  28399.829 MB/s
+     Statistics twitter.json         ...  0.027 ms  22305.877 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 18736
+
+Benchmarking Performance of JsonBox (C++)
+          Parse canada.json          ... 104.824 ms  20.480 MB/s
+          Parse citm_catalog.json    ... 30.212 ms  54.521 MB/s
+          Parse twitter.json         ... 15.059 ms  39.993 MB/s
+      Stringify canada.json          ... 84.645 ms  25.362 MB/s
+      Stringify citm_catalog.json    ... 16.543 ms  99.570 MB/s
+      Stringify twitter.json         ... 12.092 ms  49.806 MB/s
+       Prettify canada.json          ... 86.680 ms  24.767 MB/s
+       Prettify citm_catalog.json    ... 15.339 ms  107.386 MB/s
+       Prettify twitter.json         ... 11.888 ms  50.661 MB/s
+     Statistics canada.json          ...  0.200 ms  10733.848 MB/s
+     Statistics citm_catalog.json    ...  0.141 ms  11682.199 MB/s
+     Statistics twitter.json         ...  0.085 ms  7085.396 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 112944
+
+Benchmarking Performance of jsoncons (C++)
+          Parse canada.json          ... 30.547 ms  70.278 MB/s
+          Parse citm_catalog.json    ...  4.022 ms  409.545 MB/s
+          Parse twitter.json         ...  2.247 ms  268.028 MB/s
+      Stringify canada.json          ... 50.437 ms  42.563 MB/s
+      Stringify citm_catalog.json    ...  1.257 ms  1310.414 MB/s
+      Stringify twitter.json         ...  1.277 ms  471.620 MB/s
+       Prettify canada.json          ... 49.527 ms  43.345 MB/s
+       Prettify citm_catalog.json    ...  1.301 ms  1266.095 MB/s
+       Prettify twitter.json         ...  1.322 ms  455.566 MB/s
+     Statistics canada.json          ...  0.365 ms  5881.560 MB/s
+     Statistics citm_catalog.json    ...  0.168 ms  9804.703 MB/s
+     Statistics twitter.json         ...  0.104 ms  5790.949 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 113008
+
+Benchmarking Performance of JsonCpp (C++)
+          Parse canada.json          ... 28.131 ms  76.313 MB/s
+          Parse citm_catalog.json    ...  4.427 ms  372.078 MB/s
+          Parse twitter.json         ...  3.287 ms  183.224 MB/s
+      Stringify canada.json          ... 64.241 ms  33.417 MB/s
+      Stringify citm_catalog.json    ...  5.180 ms  317.990 MB/s
+      Stringify twitter.json         ...  3.173 ms  189.807 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.851 ms  2522.643 MB/s
+     Statistics citm_catalog.json    ...  0.304 ms  5418.388 MB/s
+     Statistics twitter.json         ...  0.187 ms  3220.635 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 215344
+
+Benchmarking Performance of json-c (C)
+          Parse canada.json          ... 30.543 ms  70.287 MB/s
+          Parse citm_catalog.json    ...  7.706 ms  213.754 MB/s
+          Parse twitter.json         ...  3.357 ms  179.404 MB/s
+      Stringify canada.json          ...  6.207 ms  345.863 MB/s
+      Stringify citm_catalog.json    ...  3.375 ms  488.056 MB/s
+      Stringify twitter.json         ...  1.730 ms  348.126 MB/s
+       Prettify canada.json          ... 11.530 ms  186.190 MB/s
+       Prettify citm_catalog.json    ...  4.772 ms  345.178 MB/s
+       Prettify twitter.json         ...  2.321 ms  259.482 MB/s
+     Statistics canada.json          ...  1.186 ms  1810.092 MB/s
+     Statistics citm_catalog.json    ...  0.280 ms  5882.822 MB/s
+     Statistics twitter.json         ...  0.092 ms  6546.290 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 59720
+
+Benchmarking Performance of hjiang/JSON++ (C++)
+          Parse canada.json          ... 56.880 ms  37.742 MB/s
+          Parse citm_catalog.json    ... 15.719 ms  104.790 MB/s
+          Parse twitter.json         ...  8.734 ms  68.956 MB/s
+      Stringify canada.json          ... 89.145 ms  24.082 MB/s
+      Stringify citm_catalog.json    ... 14.944 ms  110.224 MB/s
+      Stringify twitter.json         ...  6.952 ms  86.631 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.301 ms  7132.125 MB/s
+     Statistics citm_catalog.json    ...  0.187 ms  8808.503 MB/s
+     Statistics twitter.json         ...  0.098 ms  6145.497 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 108848
+
+Benchmarking Performance of juson (C)
+          Parse canada.json          ... 11.313 ms  189.761 MB/s
+          Parse citm_catalog.json    ...  2.045 ms  805.472 MB/s
+          Parse twitter.json         ...  0.699 ms  861.600 MB/s
+      Stringify canada.json          ... Not support
+      Stringify citm_catalog.json    ... Not support
+      Stringify twitter.json         ... Not support
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.256 ms  8385.818 MB/s
+     Statistics citm_catalog.json    ...  0.104 ms  15838.366 MB/s
+     Statistics twitter.json         ...  0.042 ms  14339.492 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 26928
+
+Benchmarking Performance of Jzon (C++)
+          Parse canada.json          ... 51.945 ms  41.328 MB/s
+          Parse citm_catalog.json    ... 21.926 ms  75.125 MB/s
+          Parse twitter.json         ...  9.989 ms  60.292 MB/s
+      Stringify canada.json          ... 11.722 ms  183.140 MB/s
+      Stringify citm_catalog.json    ...  3.951 ms  416.905 MB/s
+      Stringify twitter.json         ...  2.507 ms  240.231 MB/s
+       Prettify canada.json          ... 19.324 ms  111.093 MB/s
+       Prettify citm_catalog.json    ...  5.926 ms  277.960 MB/s
+       Prettify twitter.json         ...  3.129 ms  192.476 MB/s
+     Statistics canada.json          ...  0.733 ms  2928.744 MB/s
+     Statistics citm_catalog.json    ...  0.175 ms  9412.515 MB/s
+     Statistics twitter.json         ...  0.129 ms  4668.672 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 92464
+
+Benchmarking Performance of nbsdx_SimpleJSON (C++11)
+          Parse canada.json          ... 47.208 ms  45.475 MB/s
+          Parse citm_catalog.json    ... 15.616 ms  105.481 MB/s
+          Parse twitter.json         ...  9.219 ms  65.328 MB/s
+      Stringify canada.json          ... 41.720 ms  51.457 MB/s
+      Stringify citm_catalog.json    ...  4.829 ms  341.104 MB/s
+      Stringify twitter.json         ...  2.755 ms  218.606 MB/s
+       Prettify canada.json          ... 38.723 ms  55.439 MB/s
+       Prettify citm_catalog.json    ...  5.329 ms  309.099 MB/s
+       Prettify twitter.json         ...  2.844 ms  211.765 MB/s
+     Statistics canada.json          ...  0.478 ms  4491.150 MB/s
+     Statistics citm_catalog.json    ...  0.235 ms  7009.320 MB/s
+     Statistics twitter.json         ...  0.743 ms  810.577 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           0
+elementCount:     167178
+stringLength:         90
+Not support
+jsonstat file size = 92464
+
+Benchmarking Performance of Nlohmann (C++11)
+          Parse canada.json          ... 12.752 ms  168.348 MB/s
+          Parse citm_catalog.json    ...  3.287 ms  501.123 MB/s
+          Parse twitter.json         ...  2.938 ms  204.989 MB/s
+      Stringify canada.json          ... 38.032 ms  56.446 MB/s
+      Stringify citm_catalog.json    ...  2.627 ms  627.023 MB/s
+      Stringify twitter.json         ...  1.722 ms  349.744 MB/s
+       Prettify canada.json          ... 43.916 ms  48.884 MB/s
+       Prettify citm_catalog.json    ...  4.325 ms  380.853 MB/s
+       Prettify twitter.json         ...  2.232 ms  269.829 MB/s
+     Statistics canada.json          ...  0.310 ms  6925.063 MB/s
+     Statistics citm_catalog.json    ...  0.319 ms  5163.605 MB/s
+     Statistics twitter.json         ...  0.287 ms  2098.462 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 63792
+
+Benchmarking Performance of Parson (C)
+          Parse canada.json          ... 14.560 ms  147.443 MB/s
+          Parse citm_catalog.json    ...  4.120 ms  399.803 MB/s
+          Parse twitter.json         ...  1.995 ms  301.884 MB/s
+      Stringify canada.json          ... 62.226 ms  34.500 MB/s
+      Stringify citm_catalog.json    ...  3.013 ms  546.694 MB/s
+      Stringify twitter.json         ...  2.944 ms  204.572 MB/s
+       Prettify canada.json          ... 64.543 ms  33.261 MB/s
+       Prettify citm_catalog.json    ...  3.535 ms  465.966 MB/s
+       Prettify twitter.json         ...  3.221 ms  186.979 MB/s
+     Statistics canada.json          ...  0.454 ms  4728.567 MB/s
+     Statistics citm_catalog.json    ...  0.482 ms  3417.407 MB/s
+     Statistics twitter.json         ...  0.498 ms  1209.355 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 47424
+
+Benchmarking Performance of PicoJSON (C++)
+          Parse canada.json          ... 25.244 ms  85.041 MB/s
+          Parse citm_catalog.json    ...  8.555 ms  192.541 MB/s
+          Parse twitter.json         ...  4.464 ms  134.915 MB/s
+      Stringify canada.json          ... 45.420 ms  47.265 MB/s
+      Stringify citm_catalog.json    ...  4.624 ms  356.226 MB/s
+      Stringify twitter.json         ...  1.945 ms  309.645 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.310 ms  6925.063 MB/s
+     Statistics citm_catalog.json    ...  0.144 ms  11438.820 MB/s
+     Statistics twitter.json         ...  0.089 ms  6766.951 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 47408
+
+Benchmarking Performance of pjson (C)
+          Parse canada.json          ... Not support
+          Parse citm_catalog.json    ... Not support
+          Parse twitter.json         ... Not support
+      Stringify canada.json          ... Not support
+      Stringify citm_catalog.json    ... Not support
+      Stringify twitter.json         ... Not support
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ... Not support
+     Statistics citm_catalog.json    ... Not support
+     Statistics twitter.json         ... Not support
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ...  1.692 ms  1268.776 MB/s
+ Sax Statistics citm_catalog.json    ...  1.607 ms  1025.009 MB/s
+ Sax Statistics twitter.json         ... Not support Statistics
+ 0.668 ms  901.585 MB/s
+jsonstat file size = 14640
+
+Benchmarking Performance of Qajson4c (C)
+          Parse canada.json          ... 10.597 ms  202.583 MB/s
+          Parse citm_catalog.json    ...  2.577 ms  639.189 MB/s
+          Parse twitter.json         ...  1.659 ms  363.025 MB/s
+      Stringify canada.json          ... 21.504 ms  99.831 MB/s
+      Stringify citm_catalog.json    ...  0.696 ms  2366.652 MB/s
+      Stringify twitter.json         ...  0.377 ms  1597.503 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.420 ms  5111.356 MB/s
+     Statistics citm_catalog.json    ...  0.180 ms  9151.056 MB/s
+     Statistics twitter.json         ...  0.076 ms  7924.456 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 55608
+
+Benchmarking Performance of RapidJSON_AutoUTF (C++)
+          Parse canada.json          ...  4.593 ms  467.400 MB/s
+          Parse citm_catalog.json    ...  3.995 ms  412.313 MB/s
+          Parse twitter.json         ...  2.478 ms  243.042 MB/s
+      Stringify canada.json          ... 13.142 ms  163.352 MB/s
+      Stringify citm_catalog.json    ...  1.985 ms  829.819 MB/s
+      Stringify twitter.json         ...  1.814 ms  332.006 MB/s
+       Prettify canada.json          ... 34.162 ms  62.841 MB/s
+       Prettify citm_catalog.json    ...  6.449 ms  255.418 MB/s
+       Prettify twitter.json         ...  3.032 ms  198.634 MB/s
+     Statistics canada.json          ...  0.261 ms  8225.171 MB/s
+     Statistics citm_catalog.json    ...  0.079 ms  20850.508 MB/s
+     Statistics twitter.json         ...  0.034 ms  17713.491 MB/s
+   SaxRoundtrip canada.json          ... 19.933 ms  107.699 MB/s
+   SaxRoundtrip citm_catalog.json    ...  5.915 ms  278.477 MB/s
+   SaxRoundtrip twitter.json         ...  4.637 ms  129.881 MB/s
+ Sax Statistics canada.json          ...  4.475 ms  479.725 MB/s
+ Sax Statistics citm_catalog.json    ...  3.601 ms  457.426 MB/s
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+ 2.203 ms  273.381 MB/s
+jsonstat file size = 35120
+
+Benchmarking Performance of RapidJSON_FullPrec (C++)
+          Parse canada.json          ...  6.990 ms  307.120 MB/s
+          Parse citm_catalog.json    ...  1.338 ms  1231.084 MB/s
+          Parse twitter.json         ...  1.058 ms  569.243 MB/s
+      Stringify canada.json          ...  6.599 ms  325.317 MB/s
+      Stringify citm_catalog.json    ...  1.138 ms  1447.443 MB/s
+      Stringify twitter.json         ...  0.815 ms  738.968 MB/s
+       Prettify canada.json          ...  7.918 ms  271.125 MB/s
+       Prettify citm_catalog.json    ...  1.436 ms  1147.068 MB/s
+       Prettify twitter.json         ...  0.859 ms  701.116 MB/s
+     Statistics canada.json          ...  0.272 ms  7892.535 MB/s
+     Statistics citm_catalog.json    ...  0.085 ms  19378.707 MB/s
+     Statistics twitter.json         ...  0.028 ms  21509.239 MB/s
+   SaxRoundtrip canada.json          ... 11.867 ms  180.902 MB/s
+   SaxRoundtrip citm_catalog.json    ...  2.026 ms  813.026 MB/s
+   SaxRoundtrip twitter.json         ...  1.440 ms  418.235 MB/s
+ Sax Statistics canada.json          ...  5.921 ms  362.569 MB/s
+ Sax Statistics citm_catalog.json    ...  1.208 ms  1363.568 MB/s
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+ 0.897 ms  671.414 MB/s
+jsonstat file size = 35120
+
+Benchmarking Performance of RapidJSON_Insitu (C++)
+          Parse canada.json          ...  2.773 ms  774.169 MB/s
+          Parse citm_catalog.json    ...  0.838 ms  1965.621 MB/s
+          Parse twitter.json         ...  0.528 ms  1140.641 MB/s
+      Stringify canada.json          ...  6.272 ms  342.278 MB/s
+      Stringify citm_catalog.json    ...  1.100 ms  1497.446 MB/s
+      Stringify twitter.json         ...  0.781 ms  771.138 MB/s
+       Prettify canada.json          ...  7.248 ms  296.188 MB/s
+       Prettify citm_catalog.json    ...  1.469 ms  1121.300 MB/s
+       Prettify twitter.json         ...  0.897 ms  671.414 MB/s
+     Statistics canada.json          ...  0.259 ms  8288.685 MB/s
+     Statistics citm_catalog.json    ...  0.099 ms  16638.284 MB/s
+     Statistics twitter.json         ...  0.038 ms  15848.913 MB/s
+   SaxRoundtrip canada.json          ...  8.093 ms  265.263 MB/s
+   SaxRoundtrip citm_catalog.json    ...  1.595 ms  1032.721 MB/s
+   SaxRoundtrip twitter.json         ...  1.269 ms  474.593 MB/s
+ Sax Statistics canada.json          ...  1.569 ms  1368.241 MB/s
+ Sax Statistics citm_catalog.json    ...  0.813 ms  2026.064 MB/s
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+ 0.549 ms  1097.010 MB/s
+jsonstat file size = 35120
+
+Benchmarking Performance of RapidJSON_Iterative (C++)
+          Parse canada.json          ...  2.993 ms  717.263 MB/s
+          Parse citm_catalog.json    ...  1.148 ms  1434.835 MB/s
+          Parse twitter.json         ...  0.967 ms  622.811 MB/s
+      Stringify canada.json          ...  6.702 ms  320.318 MB/s
+      Stringify citm_catalog.json    ...  1.137 ms  1448.716 MB/s
+      Stringify twitter.json         ...  0.693 ms  869.060 MB/s
+       Prettify canada.json          ...  7.322 ms  293.194 MB/s
+       Prettify citm_catalog.json    ...  1.433 ms  1149.470 MB/s
+       Prettify twitter.json         ...  0.860 ms  700.301 MB/s
+     Statistics canada.json          ...  0.272 ms  7892.535 MB/s
+     Statistics citm_catalog.json    ...  0.082 ms  20087.684 MB/s
+     Statistics twitter.json         ...  0.030 ms  20075.289 MB/s
+   SaxRoundtrip canada.json          ...  8.275 ms  259.428 MB/s
+   SaxRoundtrip citm_catalog.json    ...  1.738 ms  947.750 MB/s
+   SaxRoundtrip twitter.json         ...  1.458 ms  413.072 MB/s
+ Sax Statistics canada.json          ...  1.816 ms  1182.142 MB/s
+ Sax Statistics citm_catalog.json    ...  1.078 ms  1528.006 MB/s
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+ 0.930 ms  647.590 MB/s
+jsonstat file size = 35120
+
+Benchmarking Performance of RapidJSON (C++)
+          Parse canada.json          ...  2.718 ms  789.834 MB/s
+          Parse citm_catalog.json    ...  1.116 ms  1475.977 MB/s
+          Parse twitter.json         ...  0.957 ms  629.319 MB/s
+      Stringify canada.json          ...  6.469 ms  331.855 MB/s
+      Stringify citm_catalog.json    ...  1.033 ms  1594.569 MB/s
+      Stringify twitter.json         ...  0.727 ms  828.416 MB/s
+       Prettify canada.json          ...  7.246 ms  296.270 MB/s
+       Prettify citm_catalog.json    ...  1.445 ms  1139.924 MB/s
+       Prettify twitter.json         ...  0.863 ms  697.866 MB/s
+     Statistics canada.json          ...  0.238 ms  9020.040 MB/s
+     Statistics citm_catalog.json    ...  0.103 ms  15992.137 MB/s
+     Statistics twitter.json         ...  0.037 ms  16277.262 MB/s
+   SaxRoundtrip canada.json          ...  8.157 ms  263.181 MB/s
+   SaxRoundtrip citm_catalog.json    ...  1.686 ms  976.981 MB/s
+   SaxRoundtrip twitter.json         ...  1.395 ms  431.727 MB/s
+ Sax Statistics canada.json          ...  1.490 ms  1440.785 MB/s
+ Sax Statistics citm_catalog.json    ...  0.981 ms  1679.093 MB/s
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+ 0.852 ms  706.876 MB/s
+jsonstat file size = 35120
+
+Benchmarking Performance of sajson (C++)
+          Parse canada.json          ...  2.043 ms  1050.793 MB/s
+          Parse citm_catalog.json    ...  0.946 ms  1741.216 MB/s
+          Parse twitter.json         ...  0.406 ms  1483.396 MB/s
+      Stringify canada.json          ... Not support
+      Stringify citm_catalog.json    ... Not support
+      Stringify twitter.json         ... Not support
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.252 ms  8518.927 MB/s
+     Statistics citm_catalog.json    ...  0.089 ms  18507.754 MB/s
+     Statistics twitter.json         ...  0.024 ms  25094.112 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 43312
+
+Benchmarking Performance of Sheredom json.h (C)
+          Parse canada.json          ...  6.307 ms  340.379 MB/s
+          Parse citm_catalog.json    ...  2.491 ms  661.257 MB/s
+          Parse twitter.json         ...  1.396 ms  431.417 MB/s
+      Stringify canada.json          ... 23.360 ms  91.899 MB/s
+      Stringify citm_catalog.json    ...  3.518 ms  468.218 MB/s
+      Stringify twitter.json         ...  1.099 ms  548.006 MB/s
+       Prettify canada.json          ... 26.548 ms  80.864 MB/s
+       Prettify citm_catalog.json    ...  3.718 ms  443.031 MB/s
+       Prettify twitter.json         ...  1.252 ms  481.037 MB/s
+     Statistics canada.json          ...  0.236 ms  9096.481 MB/s
+     Statistics citm_catalog.json    ...  0.078 ms  21117.822 MB/s
+     Statistics twitter.json         ...  0.034 ms  17713.491 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 35120
+
+Benchmarking Performance of strdup (C)
+          Parse canada.json          ...  0.049 ms  43811.623 MB/s
+          Parse citm_catalog.json    ...  0.037 ms  44518.651 MB/s
+          Parse twitter.json         ...  0.009 ms  66917.631 MB/s
+      Stringify canada.json          ...  0.049 ms  43811.623 MB/s
+      Stringify citm_catalog.json    ...  0.036 ms  45755.280 MB/s
+      Stringify twitter.json         ...  0.009 ms  66917.631 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ... Not support
+     Statistics citm_catalog.json    ... Not support
+     Statistics twitter.json         ... Not support
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... Not support Statistics
+Not support
+jsonstat file size = 14640
+
+Benchmarking Performance of taocpp/json & Nlohmann (C++11)
+          Parse canada.json          ... 17.444 ms  123.066 MB/s
+          Parse citm_catalog.json    ...  8.862 ms  185.871 MB/s
+          Parse twitter.json         ...  4.183 ms  143.978 MB/s
+      Stringify canada.json          ...  9.179 ms  233.878 MB/s
+      Stringify citm_catalog.json    ...  1.987 ms  828.983 MB/s
+      Stringify twitter.json         ...  1.165 ms  516.960 MB/s
+       Prettify canada.json          ... 12.453 ms  172.390 MB/s
+       Prettify citm_catalog.json    ...  2.655 ms  620.411 MB/s
+       Prettify twitter.json         ...  1.359 ms  443.163 MB/s
+     Statistics canada.json          ...  0.607 ms  3536.688 MB/s
+     Statistics citm_catalog.json    ...  0.352 ms  4679.517 MB/s
+     Statistics twitter.json         ...  0.329 ms  1830.574 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 100672
+
+Benchmarking Performance of taocpp/json (C++11)
+          Parse canada.json          ...  8.292 ms  258.896 MB/s
+          Parse citm_catalog.json    ...  5.027 ms  327.669 MB/s
+          Parse twitter.json         ...  2.168 ms  277.795 MB/s
+      Stringify canada.json          ...  9.055 ms  237.081 MB/s
+      Stringify citm_catalog.json    ...  1.614 ms  1020.564 MB/s
+      Stringify twitter.json         ...  0.905 ms  665.479 MB/s
+       Prettify canada.json          ... 12.315 ms  174.322 MB/s
+       Prettify citm_catalog.json    ...  2.382 ms  691.516 MB/s
+       Prettify twitter.json         ...  1.147 ms  525.073 MB/s
+     Statistics canada.json          ...  0.669 ms  3208.923 MB/s
+     Statistics citm_catalog.json    ...  0.177 ms  9306.159 MB/s
+     Statistics twitter.json         ...  0.079 ms  7623.528 MB/s
+   SaxRoundtrip canada.json          ... 13.937 ms  154.034 MB/s
+   SaxRoundtrip citm_catalog.json    ...  4.922 ms  334.659 MB/s
+   SaxRoundtrip twitter.json         ...  1.919 ms  313.840 MB/s
+ Sax Statistics canada.json          ...  4.903 ms  437.848 MB/s
+ Sax Statistics citm_catalog.json    ...  3.349 ms  491.845 MB/s
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+ 0.942 ms  639.340 MB/s
+jsonstat file size = 92480
+
+Benchmarking Performance of tunnuz/JSON++ (C++)
+          Parse canada.json          ... 52.157 ms  41.160 MB/s
+          Parse citm_catalog.json    ... 19.882 ms  82.848 MB/s
+          Parse twitter.json         ... 11.262 ms  53.477 MB/s
+      Stringify canada.json          ... 69.225 ms  31.011 MB/s
+      Stringify citm_catalog.json    ... 13.734 ms  119.935 MB/s
+      Stringify twitter.json         ...  6.004 ms  100.310 MB/s
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ... 22.476 ms  95.514 MB/s
+     Statistics citm_catalog.json    ...  6.873 ms  239.661 MB/s
+     Statistics twitter.json         ...  3.473 ms  173.412 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 80176
+
+Benchmarking Performance of Vinenthz/libjson (C)
+          Parse canada.json          ... 24.128 ms  88.974 MB/s
+          Parse citm_catalog.json    ...  9.232 ms  178.422 MB/s
+          Parse twitter.json         ...  3.586 ms  167.947 MB/s
+      Stringify canada.json          ... 37.194 ms  57.718 MB/s
+      Stringify citm_catalog.json    ...  1.938 ms  849.943 MB/s
+      Stringify twitter.json         ...  1.983 ms  303.711 MB/s
+       Prettify canada.json          ... 36.499 ms  58.817 MB/s
+       Prettify citm_catalog.json    ...  2.129 ms  773.692 MB/s
+       Prettify twitter.json         ...  1.967 ms  306.181 MB/s
+     Statistics canada.json          ...  0.317 ms  6772.144 MB/s
+     Statistics citm_catalog.json    ...  0.121 ms  13613.141 MB/s
+     Statistics twitter.json         ...  0.041 ms  14689.236 MB/s
+   SaxRoundtrip canada.json          ... 10.194 ms  210.591 MB/s
+   SaxRoundtrip citm_catalog.json    ...  6.458 ms  255.062 MB/s
+   SaxRoundtrip twitter.json         ...  3.661 ms  164.507 MB/s
+ Sax Statistics canada.json          ...  8.953 ms  239.782 MB/s
+ Sax Statistics citm_catalog.json    ...  4.991 ms  330.032 MB/s
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+ 2.013 ms  299.185 MB/s
+jsonstat file size = 39216
+
+Benchmarking Performance of C++ Workflow JSON (C)
+          Parse canada.json          ...  8.654 ms  248.067 MB/s
+          Parse citm_catalog.json    ...  1.743 ms  945.032 MB/s
+          Parse twitter.json         ...  1.425 ms  422.638 MB/s
+      Stringify canada.json          ... Not support
+      Stringify citm_catalog.json    ... Not support
+      Stringify twitter.json         ... Not support
+       Prettify canada.json          ... Not support
+       Prettify citm_catalog.json    ... Not support
+       Prettify twitter.json         ... Not support
+     Statistics canada.json          ...  0.535 ms  4012.653 MB/s
+     Statistics citm_catalog.json    ...  0.241 ms  6834.814 MB/s
+     Statistics twitter.json         ...  0.106 ms  5681.686 MB/s
+   SaxRoundtrip canada.json          ... Not support
+   SaxRoundtrip citm_catalog.json    ... Not support
+   SaxRoundtrip twitter.json         ... Not support
+ Sax Statistics canada.json          ... Not support
+ Sax Statistics citm_catalog.json    ... Not support
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:           0
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+Not support
+jsonstat file size = 22832
+
+Benchmarking Performance of YAJL (C)
+          Parse canada.json          ... 17.246 ms  124.479 MB/s
+          Parse citm_catalog.json    ...  6.219 ms  264.864 MB/s
+          Parse twitter.json         ...  2.826 ms  213.113 MB/s
+      Stringify canada.json          ... 41.208 ms  52.096 MB/s
+      Stringify citm_catalog.json    ...  1.859 ms  886.062 MB/s
+      Stringify twitter.json         ...  0.766 ms  786.238 MB/s
+       Prettify canada.json          ... 52.330 ms  41.024 MB/s
+       Prettify citm_catalog.json    ...  4.812 ms  342.309 MB/s
+       Prettify twitter.json         ...  1.561 ms  385.816 MB/s
+     Statistics canada.json          ...  0.359 ms  5979.859 MB/s
+     Statistics citm_catalog.json    ...  0.138 ms  11936.160 MB/s
+     Statistics twitter.json         ...  0.058 ms  10383.770 MB/s
+   SaxRoundtrip canada.json          ... 53.438 ms  40.173 MB/s
+   SaxRoundtrip citm_catalog.json    ...  4.396 ms  374.702 MB/s
+   SaxRoundtrip twitter.json         ...  1.536 ms  392.095 MB/s
+ Sax Statistics canada.json          ...  9.342 ms  229.798 MB/s
+ Sax Statistics citm_catalog.json    ...  2.611 ms  630.866 MB/s
+ Sax Statistics twitter.json         ... objectCount:           4
+arrayCount:        56045
+numberCount:      111126
+stringCount:          12
+trueCount:             0
+falseCount:            0
+nullCount:             0
+memberCount:           8
+elementCount:     167170
+stringLength:         90
+ 0.854 ms  705.221 MB/s
+jsonstat file size = 55600
+
+Benchmarking Conformance of ArduinoJson (C++)
+
+Benchmarking Conformance of Boost.JSON
+
+Benchmarking Conformance of CAJUN (C++)
+
+Benchmarking Conformance of ccan/json (C)
+
+Benchmarking Conformance of cJSON (C)
+
+Benchmarking Conformance of dropbox/json11 (C++11)
+
+Benchmarking Conformance of mikeando/FastJson (C++)
+
+Benchmarking Conformance of gason (C++11)
+
+Benchmarking Conformance of Jansson (C)
+
+Benchmarking Conformance of jsmn (C)
+Error -3
+Error -2
+Error -2
+Error -2
+Error -2
+Error -2
+Error -2
+Error -2
+Error -2
+Error -2
+Error -2
+Error -2
+Error -2
+Error -3
+Error -2
+
+Benchmarking Conformance of JsonBox (C++)
+Expected '"', got 'u', ignoring it.
+Expected '"', got 'n', ignoring it.
+Expected '"', got 'q', ignoring it.
+Expected '"', got 'u', ignoring it.
+Expected '"', got 'o', ignoring it.
+Expected '"', got 't', ignoring it.
+Expected '"', got 'e', ignoring it.
+Expected '"', got 'd', ignoring it.
+Expected '"', got '_', ignoring it.
+Expected '"', got 'k', ignoring it.
+Expected '"', got 'e', ignoring it.
+Expected '"', got 'y', ignoring it.
+Expected '"', got ':', ignoring it.
+Expected '"', got 'u', ignoring it.
+Expected '"', got 'l', ignoring it.
+Expected '"', got 'l', ignoring it.
+Expected '"', got 'n', ignoring it.
+Expected '"', got 'u', ignoring it.
+Expected '"', got 'l', ignoring it.
+Expected '"', got 'l', ignoring it.
+Expected a digit, '.', 'e' or 'E', got '-' instead, ignoring it.
+
+Benchmarking Conformance of jsoncons (C++)
+
+Benchmarking Conformance of JsonCpp (C++)
+
+Benchmarking Conformance of json-c (C)
+
+Benchmarking Conformance of hjiang/JSON++ (C++)
+
+Benchmarking Conformance of juson (C)
+
+Benchmarking Conformance of Jzon (C++)
+
+Benchmarking Conformance of nbsdx_SimpleJSON (C++11)
+
+Benchmarking Conformance of Nlohmann (C++11)
+
+Benchmarking Conformance of Parson (C)
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 160
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 176
+
+
+Benchmarking Conformance of PicoJSON (C++)
+
+Benchmarking Conformance of Qajson4c (C)
+
+Benchmarking Conformance of RapidJSON_AutoUTF (C++)
+
+Benchmarking Conformance of RapidJSON_FullPrec (C++)
+
+Benchmarking Conformance of RapidJSON_Insitu (C++)
+
+Benchmarking Conformance of RapidJSON_Iterative (C++)
+
+Benchmarking Conformance of RapidJSON (C++)
+
+Benchmarking Conformance of sajson (C++)
+
+Benchmarking Conformance of Sheredom json.h (C)
+
+Benchmarking Conformance of taocpp/json & Nlohmann (C++11)
+
+Benchmarking Conformance of taocpp/json (C++11)
+
+Benchmarking Conformance of tunnuz/JSON++ (C++)
+
+Warning: potential memory leak (4 allocations for 272 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 0
+   freeCount = 6
+ currentSize = 272
+    peakSize = 640
+
+
+Warning: potential memory leak (3 allocations for 168 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 4
+ currentSize = 168
+    peakSize = 488
+
+
+Warning: potential memory leak (4 allocations for 272 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 0
+   freeCount = 6
+ currentSize = 272
+    peakSize = 640
+
+
+Warning: potential memory leak (5 allocations for 328 bytes)
+Memory stats:
+ mallocCount = 14
+reallocCount = 0
+   freeCount = 9
+ currentSize = 328
+    peakSize = 752
+
+
+Warning: potential memory leak (5 allocations for 456 bytes)
+Memory stats:
+ mallocCount = 15
+reallocCount = 0
+   freeCount = 10
+ currentSize = 456
+    peakSize = 776
+
+
+Warning: potential memory leak (4 allocations for 400 bytes)
+Memory stats:
+ mallocCount = 11
+reallocCount = 0
+   freeCount = 7
+ currentSize = 400
+    peakSize = 688
+
+
+Warning: potential memory leak (4 allocations for 368 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 0
+   freeCount = 6
+ currentSize = 368
+    peakSize = 760
+
+
+Warning: potential memory leak (5 allocations for 536 bytes)
+Memory stats:
+ mallocCount = 15
+reallocCount = 0
+   freeCount = 10
+ currentSize = 536
+    peakSize = 952
+
+
+Warning: potential memory leak (5 allocations for 408 bytes)
+Memory stats:
+ mallocCount = 14
+reallocCount = 0
+   freeCount = 9
+ currentSize = 408
+    peakSize = 856
+
+
+Warning: potential memory leak (3 allocations for 136 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 6
+ currentSize = 136
+    peakSize = 456
+
+
+Warning: potential memory leak (5 allocations for 408 bytes)
+Memory stats:
+ mallocCount = 14
+reallocCount = 0
+   freeCount = 9
+ currentSize = 408
+    peakSize = 856
+
+
+Warning: potential memory leak (3 allocations for 136 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 4
+ currentSize = 136
+    peakSize = 472
+
+
+Warning: potential memory leak (3 allocations for 152 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 4
+ currentSize = 152
+    peakSize = 488
+
+
+Warning: potential memory leak (3 allocations for 136 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 4
+ currentSize = 136
+    peakSize = 440
+
+
+Warning: potential memory leak (3 allocations for 152 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 4
+ currentSize = 152
+    peakSize = 456
+
+
+Warning: potential memory leak (3 allocations for 152 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 6
+ currentSize = 152
+    peakSize = 488
+
+
+Warning: potential memory leak (5 allocations for 344 bytes)
+Memory stats:
+ mallocCount = 14
+reallocCount = 0
+   freeCount = 9
+ currentSize = 344
+    peakSize = 768
+
+
+Warning: potential memory leak (4 allocations for 288 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 0
+   freeCount = 6
+ currentSize = 288
+    peakSize = 656
+
+
+Warning: potential memory leak (4 allocations for 272 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 0
+   freeCount = 4
+ currentSize = 272
+    peakSize = 616
+
+
+Warning: potential memory leak (4 allocations for 272 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 0
+   freeCount = 4
+ currentSize = 272
+    peakSize = 616
+
+
+Warning: potential memory leak (5 allocations for 440 bytes)
+Memory stats:
+ mallocCount = 14
+reallocCount = 0
+   freeCount = 9
+ currentSize = 440
+    peakSize = 952
+
+
+Warning: potential memory leak (4 allocations for 288 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 288
+    peakSize = 632
+
+
+Benchmarking Conformance of Vinenthz/libjson (C)
+
+Warning: potential memory leak (4 allocations for 96 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 96
+    peakSize = 29096
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29040
+
+
+Warning: potential memory leak (4 allocations for 128 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 128
+    peakSize = 29128
+
+
+Warning: potential memory leak (4 allocations for 144 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 144
+    peakSize = 29160
+
+
+Warning: potential memory leak (1 allocations for 40 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 40
+    peakSize = 29056
+
+
+Warning: potential memory leak (4 allocations for 96 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 96
+    peakSize = 29112
+
+
+Warning: potential memory leak (4 allocations for 112 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 112
+    peakSize = 29112
+
+
+Warning: potential memory leak (5 allocations for 120 bytes)
+Memory stats:
+ mallocCount = 11
+reallocCount = 0
+   freeCount = 6
+ currentSize = 120
+    peakSize = 29144
+
+
+Warning: potential memory leak (5 allocations for 136 bytes)
+Memory stats:
+ mallocCount = 11
+reallocCount = 0
+   freeCount = 6
+ currentSize = 136
+    peakSize = 29208
+
+
+Warning: potential memory leak (2 allocations for 48 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 5
+ currentSize = 48
+    peakSize = 29064
+
+
+Warning: potential memory leak (2 allocations for 48 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 5
+ currentSize = 48
+    peakSize = 29064
+
+
+Warning: potential memory leak (2 allocations for 80 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 5
+ currentSize = 80
+    peakSize = 29112
+
+
+Warning: potential memory leak (2 allocations for 48 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 5
+ currentSize = 48
+    peakSize = 29064
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29040
+
+
+Warning: potential memory leak (1 allocations for 40 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 40
+    peakSize = 29040
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29040
+
+
+Warning: potential memory leak (2 allocations for 48 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 5
+ currentSize = 48
+    peakSize = 29048
+
+
+Warning: potential memory leak (2 allocations for 48 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 5
+ currentSize = 48
+    peakSize = 29048
+
+
+Warning: potential memory leak (2 allocations for 48 bytes)
+Memory stats:
+ mallocCount = 7
+reallocCount = 0
+   freeCount = 5
+ currentSize = 48
+    peakSize = 29064
+
+
+Warning: potential memory leak (4 allocations for 96 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 96
+    peakSize = 29112
+
+
+Warning: potential memory leak (4 allocations for 96 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 96
+    peakSize = 29096
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29024
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29040
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29040
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29024
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29024
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29024
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29024
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 6
+reallocCount = 0
+   freeCount = 5
+ currentSize = 24
+    peakSize = 29024
+
+
+Warning: potential memory leak (5 allocations for 136 bytes)
+Memory stats:
+ mallocCount = 11
+reallocCount = 0
+   freeCount = 6
+ currentSize = 136
+    peakSize = 29208
+
+
+Warning: potential memory leak (4 allocations for 96 bytes)
+Memory stats:
+ mallocCount = 9
+reallocCount = 0
+   freeCount = 5
+ currentSize = 96
+    peakSize = 29096
+
+
+Benchmarking Conformance of C++ Workflow JSON (C)
+
+Warning: potential memory leak (1 allocations for 40 bytes)
+Memory stats:
+ mallocCount = 4
+reallocCount = 0
+   freeCount = 3
+ currentSize = 40
+    peakSize = 176
+
+
+Warning: potential memory leak (1 allocations for 40 bytes)
+Memory stats:
+ mallocCount = 4
+reallocCount = 0
+   freeCount = 3
+ currentSize = 40
+    peakSize = 176
+
+
+Warning: potential memory leak (1 allocations for 40 bytes)
+Memory stats:
+ mallocCount = 4
+reallocCount = 0
+   freeCount = 3
+ currentSize = 40
+    peakSize = 176
+
+
+Warning: potential memory leak (1 allocations for 24 bytes)
+Memory stats:
+ mallocCount = 4
+reallocCount = 0
+   freeCount = 3
+ currentSize = 24
+    peakSize = 144
+
+
+Benchmarking Conformance of YAJL (C)
+
+Warning: potential memory leak (5 allocations for 152 bytes)
+Memory stats:
+ mallocCount = 11
+reallocCount = 2
+   freeCount = 8
+ currentSize = 152
+    peakSize = 2664
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 536
+
+
+Warning: potential memory leak (5 allocations for 152 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 2
+   freeCount = 7
+ currentSize = 152
+    peakSize = 608
+
+
+Warning: potential memory leak (5 allocations for 152 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 2
+   freeCount = 7
+ currentSize = 152
+    peakSize = 624
+
+
+Warning: potential memory leak (2 allocations for 80 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 80
+    peakSize = 552
+
+
+Warning: potential memory leak (4 allocations for 160 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 2
+   freeCount = 8
+ currentSize = 160
+    peakSize = 656
+
+
+Warning: potential memory leak (4 allocations for 144 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 2
+   freeCount = 8
+ currentSize = 144
+    peakSize = 624
+
+
+Warning: potential memory leak (6 allocations for 224 bytes)
+Memory stats:
+ mallocCount = 11
+reallocCount = 3
+   freeCount = 8
+ currentSize = 224
+    peakSize = 680
+
+
+Warning: potential memory leak (5 allocations for 184 bytes)
+Memory stats:
+ mallocCount = 11
+reallocCount = 3
+   freeCount = 9
+ currentSize = 184
+    peakSize = 712
+
+
+Warning: potential memory leak (7 allocations for 200 bytes)
+Memory stats:
+ mallocCount = 12
+reallocCount = 3
+   freeCount = 8
+ currentSize = 200
+    peakSize = 672
+
+
+Warning: potential memory leak (3 allocations for 104 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 1
+   freeCount = 8
+ currentSize = 104
+    peakSize = 616
+
+
+Warning: potential memory leak (7 allocations for 216 bytes)
+Memory stats:
+ mallocCount = 12
+reallocCount = 3
+   freeCount = 8
+ currentSize = 216
+    peakSize = 704
+
+
+Warning: potential memory leak (7 allocations for 200 bytes)
+Memory stats:
+ mallocCount = 12
+reallocCount = 3
+   freeCount = 8
+ currentSize = 200
+    peakSize = 672
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 536
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 520
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 536
+
+
+Warning: potential memory leak (3 allocations for 88 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 1
+   freeCount = 8
+ currentSize = 88
+    peakSize = 584
+
+
+Warning: potential memory leak (3 allocations for 88 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 1
+   freeCount = 8
+ currentSize = 88
+    peakSize = 584
+
+
+Warning: potential memory leak (3 allocations for 88 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 1
+   freeCount = 8
+ currentSize = 88
+    peakSize = 600
+
+
+Warning: potential memory leak (5 allocations for 152 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 2
+   freeCount = 7
+ currentSize = 152
+    peakSize = 624
+
+
+Warning: potential memory leak (5 allocations for 152 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 2
+   freeCount = 7
+ currentSize = 152
+    peakSize = 608
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 520
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 536
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 536
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 520
+
+
+Warning: potential memory leak (2 allocations for 80 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 80
+    peakSize = 536
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 520
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 520
+
+
+Warning: potential memory leak (2 allocations for 64 bytes)
+Memory stats:
+ mallocCount = 8
+reallocCount = 1
+   freeCount = 7
+ currentSize = 64
+    peakSize = 520
+
+
+Warning: potential memory leak (6 allocations for 192 bytes)
+Memory stats:
+ mallocCount = 12
+reallocCount = 3
+   freeCount = 9
+ currentSize = 192
+    peakSize = 2736
+
+
+Warning: potential memory leak (5 allocations for 168 bytes)
+Memory stats:
+ mallocCount = 10
+reallocCount = 2
+   freeCount = 7
+ currentSize = 168
+    peakSize = 624
+
+
+
+
+Warning: potential memory leak (1451 allocations for 35329200 bytes)
+Memory stats:
+ mallocCount = 301729227
+reallocCount = 8029367
+   freeCount = 309757143
+ currentSize = 35329200
+    peakSize = 3707407504
+
+cd result && make -f makefile
+make[1]: Entering directory '/home/muxi/originjs/nativejson-benchmark/result'
+php conformance.php conformance.csv > conformance.html
+php performance.php performance_13thGenCorei9-13900HX_linux64_gcc11.4.csv > performance_13thGenCorei9-13900HX_linux64_gcc11.4.html
+make[1]: Leaving directory '/home/muxi/originjs/nativejson-benchmark/result'
