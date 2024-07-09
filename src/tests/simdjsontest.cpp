@@ -124,6 +124,7 @@ class SimdTest : public TestBase {
 
   bool ParseString(const char *j, std::string &s) const override {
     simdjson::error_code error;
+    simdjson::dom::parser parser;
     std::string_view answer;
     parser.parse(j,strlen(j))
         .at(0)
