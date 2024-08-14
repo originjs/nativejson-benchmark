@@ -25,12 +25,6 @@
 [submodule "thirdparty/ujson4c"]
 	path = thirdparty/ujson4c
 	url = https://github.com/esnme/ujson4c.git
-[submodule "thirdparty/udp-json-parser"]
-	path = thirdparty/udp-json-parser
-	url = https://github.com/udp/json-parser.git
-[submodule "thirdparty/udp-json-builder"]
-	path = thirdparty/udp-json-builder
-	url = https://github.com/udp/json-builder.git
 [submodule "thirdparty/cajun-jsonapi"]
 	path = thirdparty/cajun-jsonapi
 	url = https://github.com/cajun-jsonapi/cajun-jsonapi.git
@@ -43,9 +37,6 @@
 [submodule "thirdparty/jsonbox"]
 	path = thirdparty/jsonbox
 	url = https://github.com/anhero/JsonBox.git
-[submodule "thirdparty/json-c"]
-	path = thirdparty/json-c
-	url = https://github.com/json-c/json-c.git
 [submodule "thirdparty/parson"]
 	path = thirdparty/parson
 	url = https://github.com/kgabis/parson.git
@@ -67,7 +58,6 @@
 [submodule "thirdparty/ArduinoJson"]
 	path = thirdparty/ArduinoJson
 	url = https://github.com/bblanchon/ArduinoJson.git
-
 [submodule "thirdparty/jeayeson"]
 	path = thirdparty/jeayeson
 	url = https://github.com/jeaye/jeayeson.git
@@ -77,9 +67,6 @@
 [submodule "thirdparty/Jzon"]
 	path = thirdparty/Jzon
 	url = https://github.com/Zguy/Jzon.git
-[submodule "thirdparty/sajson"]
-	path = thirdparty/sajson
-	url = https://github.com/chadaustin/sajson.git
 [submodule "thirdparty/jvar"]
 	path = thirdparty/jvar
 	url = https://github.com/YasserAsmi/jvar.git
@@ -113,9 +100,6 @@
 [submodule "thirdparty/cJSON"]
 	path = thirdparty/cJSON
 	url = https://github.com/DaveGamble/cJSON.git
-[submodule "thirdparty/juson"]
-	path = thirdparty/juson
-	url = https://github.com/wgtdkp/juson.git
 [submodule "thirdparty/ULib"]
 	path = thirdparty/ULib
 	url = https://github.com/stefanocasazza/ULib

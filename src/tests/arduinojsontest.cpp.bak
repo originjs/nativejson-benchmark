@@ -4,10 +4,10 @@
 #include <sstream>
 
 #define ARDUINOJSON_ENABLE_STD_STREAM 1
-#include "ArduinoJson/include/ArduinoJson.hpp"
+#include "ArduinoJson/ArduinoJson.h"
 
 using namespace ArduinoJson;
-using namespace ArduinoJson::Internals;
+//using namespace ArduinoJson::Internals;
 
 static void GenStat(Stat& stat, const JsonVariant& v) {
     if (v.is<const JsonArray&>()) {
@@ -51,7 +51,7 @@ public:
     ~ArduinojsonParseResult() { free(buffer); }
 
     char* buffer;
-    DynamicJsonBuffer jsonBuffer;
+    JsonDocument jsonBuffer;
     JsonVariant root;
 };
 

@@ -60,12 +60,12 @@ Currently 43 libraries are successfully benchmarked. They are listed in alphabet
 
 Library | Language | Version | Notes
 --------|----------|---------|-------------------
-[ArduinoJson](https://github.com/bblanchon/ArduinoJson) | C++ | 5.6.6
-[Boost.JSON](https://github.com/boostorg/json) | C++ | 1.80.0
+[ArduinoJson](https://github.com/bblanchon/ArduinoJson) | C++ | 7.1.0
+[Boost.JSON](https://github.com/boostorg/json) | C++ | 1.86.0
 [CAJUN](https://github.com/cajun-jsonapi/cajun-jsonapi) | C++ | 2.0.3
 [C++ REST SDK](https://github.com/Microsoft/cpprestsdk) | C++11 | v2.8.0 | Need Boost on non-Windows platform. DOM strings must be UTF16 on Windows and UTF8 on non-Windows platform.
 [ccan/json](https://github.com/rustyrussell/ccan/) | C | 
-[cJSON](https://github.com/DaveGamble/cJSON) | C | 1.5.0 |
+[cJSON](https://github.com/DaveGamble/cJSON) | C | 1.7.18 |
 [Configuru](https://github.com/emilk/Configuru) | C++ | 2015-12-18 | gcc/clang only |
 [dropbox/json11](https://github.com/dropbox/json11) | C++11 | 
 [Facil.io](https://github.com/boazsegev/facil.io) | C | 0.5.3 | 
@@ -74,20 +74,20 @@ Library | Language | Version | Notes
 [gason](https://github.com/vivkin/gason) | C++11 | 
 [jansson](https://github.com/akheron/jansson) | C | v2.7
 [jeayeson](https://github.com/jeaye/jeayeson) | C++14
-[json-c](https://github.com/json-c/json-c) | C | 0.12.1
-[jsoncons](https://github.com/danielaparker/jsoncons) | C++11 | 0.97.1
+[json-c](https://github.com/json-c/json-c) | C | 0.17
+[jsoncons](https://github.com/danielaparker/jsoncons) | C++11 | 0.176.0
 [json-voorhees](https://github.com/tgockel/json-voorhees) | C++ | v1.1.1
 [json spirit](http://www.codeproject.com/Articles/20027/JSON-Spirit-A-C-JSON-Parser-Generator-Implemented) | C++ | 4.08 | Need Boost
 [Json Box](https://github.com/anhero/JsonBox) | C++ | 0.6.2
-[JsonCpp](https://github.com/open-source-parsers/jsoncpp) | C++ | 1.0.0
+[JsonCpp](https://github.com/open-source-parsers/jsoncpp) | C++ | 1.9.5
 [hjiang/JSON++](https://github.com/hjiang/jsonxx) | C++ | 
-[jsmn](https://github.com/zserge/jsmn) | C | | Not parsing number per se, so do it as post-process.
+[jsmn](https://github.com/zserge/jsmn) | C | | v1.1.0
 [jvar](https://github.com/YasserAsmi/jvar) | C++ | v1.0.0 | gcc/clang only |
 [Jzon](https://github.com/Zguy/Jzon) | C++ | v2-1
 [nbsdx/SimpleJSON](https://github.com/nbsdx/SimpleJSON) | C++11 |
-[Nlohmann/json](https://github.com/nlohmann/json) | C++11 | v2.0.3
-[parson](https://github.com/kgabis/parson) | C | 
-[picojson](https://github.com/kazuho/picojson) | C++ | 1.3.0
+[Nlohmann/json](https://github.com/nlohmann/json) | C++11 | 3.11.3
+[parson](https://github.com/kgabis/parson) | C | 1.5.3
+[picojson](https://github.com/kazuho/picojson) | C++ | 1.3.1
 [pjson](https://github.com/ony/pjson) | C | | No numbers parsing, no DOM interface
 [POCO](https://github.com/pocoproject/poco) | C++ | 1.7.5 | Need installation |
 [qajson4c](https://github.com/USESystemEngineeringBV/qajson4c) | C | 1.0.0 | gcc/clang only |

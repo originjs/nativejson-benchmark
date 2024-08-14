@@ -2,7 +2,7 @@
 
 #include "../test.h"
 
-#include "nlohmann/src/json.hpp"
+#include "nlohmann/json.hpp"
 
 #include "taocppjson/include/tao/json.hpp"
 
