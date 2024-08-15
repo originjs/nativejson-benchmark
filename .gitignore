@@ -7,3 +7,5 @@
 /result/*.html
 /result/*.md
 src/machine.h
+
+node_modules
