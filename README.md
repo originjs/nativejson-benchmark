@@ -72,7 +72,7 @@ Library | Language | Version | Notes
 [FastJson](https://github.com/mikeando/fastjson) | C++ | | Not parsing number per se, so do it as post-process.
 [folly](https://github.com/facebook/folly) | C++11 | 2016.08.29.00 | Need installation |
 [gason](https://github.com/vivkin/gason) | C++11 | 
-[jansson](https://github.com/akheron/jansson) | C | v2.7
+[jansson](https://github.com/akheron/jansson) | C | v2.14
 [jeayeson](https://github.com/jeaye/jeayeson) | C++14
 [json-c](https://github.com/json-c/json-c) | C | 0.17
 [jsoncons](https://github.com/danielaparker/jsoncons) | C++11 | 0.176.0
@@ -140,10 +140,11 @@ The benchmark program reads `data/data.txt` which contains file names of JSON to
 3. Copy premake5 executable to `build/` path (or system path).
 4. Run `premake.bat` or `premake.sh` in `build/`
 5. On Windows, build the solution at `build/vs2015/`.
-6. On other platforms, run GNU `make -f benchmark.make config=release_x32 && make -f nativejson.make config=release_x32` (or `release_x64`) at `build/gmake/`
+6. On other platforms, run GNU `make -f benchmark.make config=release_x64 && make -f nativejson.make config=release_x64` (or `release_x64`) at `build/gmake/`
+   - `make -f jsonstat.make config=release_x64`
 7. Optional: run `build/machine.sh` for UNIX or CYGWIN to use CPU info to generate prefix of result filename.
 8. Run the `nativejson_release_...` executable is generated at `bin/`
-9. The results in CSV format will be written to `result/`.
+9.  The results in CSV format will be written to `result/`.
 10. Run GNU `make` in `result/` to generate results in HTML.
 
 For simplicity, on Linux/OSX users can simply run `make` (or `make CONFIG=release_x32`) at project root to run 4-10 above.

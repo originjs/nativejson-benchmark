@@ -13,3 +13,4 @@
 #include "jansson/src/strconv.c"
 #include "jansson/src/utf.c"
 #include "jansson/src/value.c"
+#include "jansson/src/dtoa.c"
