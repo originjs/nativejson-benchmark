@@ -96,8 +96,11 @@ class SimdTest : public TestBase {
   // Currently unsupported, simdjson v0.3
   StringResultBase *Prettify(
       const ParseResultBase *parseResult) const override {
-    (void)parseResult;
-    return nullptr;
+        auto sr = std::make_unique<SimdStringResult>();
+
+    auto pr = static_cast<const SimdJsonParseResult *>(parseResult);
+    auto serial = simdjson::prettify(pr->root);
+    return true;
   }
 #endif
 
